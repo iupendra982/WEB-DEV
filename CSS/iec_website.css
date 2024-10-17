@@ -1,0 +1,73 @@
+body{
+    background-color: #0d1117;
+}
+.menu{
+    
+    font-size: 50px;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar{
+    width: 1600px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ac01fc;
+    color: white;
+    border-radius: 50px;
+    margin-left: 200px;
+    margin-right: 2000px;
+    margin-top: 50px;
+}
+.logo img{
+    width: 200px;
+    height: 200px;
+    padding-left: 40px;
+    position: static;
+}
+a{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    color: white;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+.intro {
+    max-width: 800px;
+}
+
+.intro h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.intro h2 {
+    font-size: 3em;
+    color: #ac01fc;
+    margin-bottom: 1em;
+    text-shadow: 0 0 10px #ac01fc;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+.btn {
+    padding: 15px 30px;
+    background-color: #ac01fc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #ac01fc;
+    box-shadow: 0 0 10px #ac01fc;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #ac01fc;
+    border-color: #ac01fc;
+}

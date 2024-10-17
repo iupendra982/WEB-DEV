@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-size: 51px;
+    font-weight: 700;
+ /* line-height: 62.17px; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background: url(3D\ Paths.png);
+}
+
+.container {
+    display: flex;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.left, .right {
+    padding: 20px;
+    color: #fff;
+}
+
+.left {
+    background-color: #1a1a1a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left h1, .left h2 {
+    /* margin-bottom: 20px; */
+    margin-top: -50px;
+}
+
+.iec {
+    font-size: 50px;
+}
+
+.right {
+    background-color: #202020;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.membership-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-form h2 {
+    margin-bottom: 20px;
+}
+
+.membership-form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.membership-form input, .membership-form select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.flex-item select option{
+    font-size: 16px;
+}
+
+.field-of-interest option{
+    font-size: 16px;
+}
+
+.upload-container {
+    display: flex;
+    gap: 20px;
+}
+
+.upload-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-item input {
+    padding: 5px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terms input {
+    margin-right: 100px;
+}
+
+.terms label{
+    padding-left: -100px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+}

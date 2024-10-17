@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEC_WEBSITE</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="trial1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#main_page"><img src="iec_logo.png" alt="iec_logo"></a>
+            </div>
+            <div class="toggle">
+                <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#our-team">Our Team</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about-us">About Us</a></li>
+            </ul>
+        </nav>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $(".toggle").on("click",function(){
+                    if($(".menu").hasClass("active")){
+                        $(".menu").removeClass("active");
+                        $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                    }
+                    else{
+                        $(".menu").addClass("active");
+                        $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+                    }
+                });
+            });
+        </script>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Let's start turning</h1>
+            <h2>Inno-Vision to Inno-Vation</h2>
+            <p>Welcome to the heart of innovation and entrepreneurship at Siksha ‘O’ Anusandhan. <br>E-Cell is your gateway to a world of creativity, entrepreneurship, and innovation. We ignite the sparks of ideas,
+                <br> nurturing them into impactful ventures.</p>
+            <p>Join our thriving community of like-minded innovators, connect with industry experts and mentors,
+                <br> and access workshops, events, and resources. Let’s turn your vision into reality with the support of E-Cell!</p>
+            <a href="#know-more" class="btn">Know More</a>
+        </section>
+    </main>
+</body>
+</html>

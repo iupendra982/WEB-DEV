@@ -1,0 +1,85 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+h1,h3{
+    color: #b92b27;
+}
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+.upvote{
+    background-color: green;
+    color: antiquewhite;
+}
+/*  descendant selector */
+.post a{
+   color: purple; 
+   background-color: yellow;
+}
+nav ul li a{
+    color: hotpink;
+}
+p+h3{
+    text-decoration: underline;
+}
+.upvote+button{
+    background-color: cornflowerblue;
+    color: blue;
+}
+/* Child Combinator */
+div > input{
+    background-color: darksalmon;
+}
+/* Attribute Selector */
+input[type="text"]{
+    color: red;
+}
+input[type="password"]{
+    color: green;
+}
+/* using attribute selector without value */
+input[type]{
+    background-color: ghostwhite;
+}
+/* Pseudo class */
+/* hover effect */
+button:hover{
+    background-color: black;
+    color: white;
+}
+h3:hover{
+    text-decoration: none;
+}
+/* active class */
+button:active{
+    background-color: blueviolet;
+}
+p:active{
+    font-weight: bold;
+    color: green;
+}
+/* checked property using sibling relation */
+input[type="radio"]:checked + label{
+    color: red;
+    font-weight: bold;
+    background-color: aqua;
+}
+/* nth type relation */
+p:nth-of-type(odd){
+    background-color: rgb(212, 165, 94);
+}
+p:nth-of-type(even){
+    background-color: rgb(182, 136, 235);
+}
+/* Pseudo Elements Properties */
+h1::first-letter{
+    color: black;
+}
+p::first-line{
+    color: rgb(236, 0, 0);
+    font-weight: 900;
+}

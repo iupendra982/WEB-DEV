@@ -1,0 +1,136 @@
+/* html ke elements ki hierarchy wise hi css likh rahe hai */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", serif;
+}
+.main_box{
+    background: url("photo.jpg");
+    /* vh means view port height it is in respect of full page here height will not work to 
+    adjust the height of the background image*/
+    height: 100vh;
+    background-size: cover;
+}
+.btn_one{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    /* positin absolute means in respect of its parent container or body */
+    position: absolute;
+    left: 16px;
+    /* line height bole to ek element ko kitna space chaiye wrt others ya to bol sakte hai 
+    distance between two texts in terms of height*/
+    line-height: 60px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.sidebar_menu{
+    position: fixed;
+    /* left -300px isliye taaki screen se gayab ho par exist kare taaki baad me efeect ki 
+    tarah use kar sake , click karne pe screen pe wapas dikhe  */
+    left: -300px;
+    /* height 100vh isliye taaki left me side bar poori ki poori height le */
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+}
+.sidebar_menu .logo{
+    position: absolute;
+    /* ab logo ko apne parent container yani .sidebar_menu ki complete width mil rahi hai */
+    width: 100%;
+    /* line height 60px taaki purani button jitna bada hi dikhe */
+    line-height: 60px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sidebar_menu .btn_two{
+    /* maximum property same as btn one */
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    /* position absolute isliye kyunki side bar ke according position de rahe */
+    position: absolute;
+    left: 275px;
+    /* ckeck uncheck ke effect ke liye opacity 0 to matlab gayab screen se */
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    /* 100% width dene ka matlab ye hai ki side bar ki poori width occupy kar le  */
+    width: 100%;
+    /* top se 80px taaki neeche aa jae thoda   */
+    top: 80px;
+}
+.sidebar_menu .menu li{
+    /* makes distance between the li iems */
+    margin-top: 6px;
+    /* top-bottom 10px and left right se 20px padding*/
+    padding: 10px 20px;
+}
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar_menu .menu i{
+    /* icons or test ke beech distance dene ke liye */
+    padding-right: 8px;
+}
+.sidebar_menu .social_media{
+    /* taaki apne container ke presspective me rahe agar yha pe fixed use karenge to body ke
+    terms me 25% place hoga isliye absolute */
+    position: absolute;
+    left: 25%;
+    /* apne parent container ke  bottom se 20px upar rahe matlab neeche place kar rahe hai */
+    bottom: 20px;
+}
+.sidebar_menu .social_media i{
+    color: white;
+    opacity: 0.5;
+    padding: 0.5px;
+}
+#check{
+    /* checkbox ko screen se gayab karne ke liye display:none */
+    display: none;
+}
+/* ab hover properties denge basic css de cchuke hai */
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.btn_one i:hover{
+    font-size: 40px;
+}
+.btn_two i:hover{
+    font-size: 30px;
+}
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    /* size me halke sse bade dikhane ke liye transform ka use karenge */
+    /* transfform: scale(2); matlab itna times bada ho jaega */
+    transform: scale(1.2);
+}
+/* configuring checkbox */
+/* ~ it is a general sibling selector */
+/* three stripe wale icon ko dabane se checkbox me tick ho rha to left 0px ho rha hai or fir 
+cross pe wapas click karne par wapas se unchecked ho jega box to left -300px ho jaega */
+#check:checked ~ .sidebar_menu{
+    left: 0;
+}
+/* is se three stripe pe click karne pe left 300px to hoga hi or icon gayab ho jaega  */
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+/* pehle cross icon ki opacity 0 thi to usko show karne ke liye use karenge */
+#check:checked ~ .sidebar_menu .btn_two {
+    opacity: 1;
+}

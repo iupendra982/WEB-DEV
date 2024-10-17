@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+   <form action="/action">
+    Text Box
+    <input placeholder="any text">
+    <div>
+        <label for="username">Enter your Username:</label>
+        <input type="text" id="username" placeholder="Username" name="user">
+    </div>
+    <div>
+        <label for="password">Enter password</label>
+        <input type="password" id="password" placeholder="password">
+    </div>
+    <div>
+        <label for="number">Enter Number</label>
+        <input type="number" placeholder="number" id="number">
+    </div>
+    <div>
+        <label for="time">Enter Time</label>
+        <input type="time" id="time">
+    </div>
+    <div>
+        <label for="date">Choose date</label>
+        <input type="date" id="date">
+    </div>
+    <div>
+        <label for="age">Enter your age</label>
+        <input type="number" placeholder="age" id="age">
+    </div>
+    <button type="submit">Submit</button>
+    <button type="button">Do Nothing</button>
+    <button type="reset">Reset</button>
+    <br>
+    <input type="button" value="Click Me">
+    <input type="submit">
+   </form> 
+   <hr>
+   <form action="https://www.youtube.com/results">
+    <input type="text" name="search_query" id="" placeholder="Search in YouTube">
+    <button>Search</button>
+   </form>
+   <hr>
+   <hr>
+   <form action="https://www.google.com/search?">
+    <input type="text" placeholder="Search in Google" name="q">
+    <button>Search</button>
+    <hr>
+   <input type="checkbox" id="age1" name="age" checked>
+   <label for="age1">I am 18+</label>
+   <!-- check box tick karenge to value on paas hogi varna kuch ni -->
+   <button>Submit</button>
+   <div>
+    <input type="radio" name="fruit" id="apple" value="apple">
+    <label for="apple">apple</label>
+    <input type="radio" name="fruit" id="mango" value="mango">
+    <label for="mango">mango</label>
+    <input type="radio" name="fruit" id="banaana" value="banaana">
+    <label for="banaana">banaana</label>
+   </div>
+   <!-- value use kareenge input me tabhi backend me uski value paas hogi ni to sirf on jaega -->
+    <br><hr>
+    <div>
+        Choose Your Subjects :
+        <input type="checkbox" name="subjects" id="maths" value="maths">
+        <label for="maths">Maths</label>
+        <input type="checkbox" name="subjects" id="science" value="science">
+        <label for="science">Science</label>
+        <input type="checkbox" name="subjects" id="english" value="english">
+        <label for="english">English</label>
+    </div>
+    <hr>
+    <div>
+        Choose your Profession 
+        <select name="professio " id="profession">
+            <option value="" selected>Select your Option</option>
+            <option value="student">Student</option>
+            <option value="dev">Devloper</option>
+        </select>
+    </div>
+    <hr>
+    <div>
+        <label for="volume">Volume</label>
+        <input type="range" id="volume" name="vol" min="0" max="100" step="10">
+    </div>
+    <hr>
+    <div>
+        <label for="feedback">Please provide your feedback :</label>
+        <textarea name="feedback" id="feedback" rows="2" cols="25"></textarea>
+    </div>
+   </form>
+</body>
+</html>

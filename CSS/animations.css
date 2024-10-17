@@ -1,0 +1,23 @@
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+    /* do animation ko ek saath use karne ke liye comma use karenge */
+    /* or unki properties ko bhi comma laga ke de sakte hain */
+    animation-name: fontAnimation,colorAnimation;
+    animation-duration: 2s,4s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes fontAnimation {
+    from{font-size: 20px;}
+    to{font-size: 40px;}
+}
+/* we can add as many stages as we want of percent */
+@keyframes colorAnimation{
+    0%{background-color: green;}
+    50%{background-color: blue;}
+    100%{background-color: orange;}
+}

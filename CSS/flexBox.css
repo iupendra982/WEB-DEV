@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+#container{
+    height: 300px;
+    width: 85%;
+    background-color: rgb(179, 197, 197);
+    margin: 10px auto;
+    border: 2px solid black;
+    /* Elements ko container me laane ke liye display flex use karenge */
+    display: flex;
+    /* flex-direction: row; isko use karne se row wise arranged hai column wala use karenge
+    to column wise arrange honge */
+    flex-direction: row;   /* ye use ho rha elements kis way pe arrange hai */
+    /* Justify content use hoga pehle to arrangement change karne ke liye or dusra space dene
+    ke liye elements ya content ke beech  */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#container div{
+    height: 100px;
+    width: 300px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: larger;
+}
