@@ -31,3 +31,10 @@ console.log(colors);
 //sorting
 console.log(allcolors);
 console.log(allcolors.sort());
+
+//for of loop
+console.log("for of loop");
+let fruits=["mango","apple","banana","litchi","orange"];
+for(fruit of fruits){
+    console.log(fruit);
+    }
