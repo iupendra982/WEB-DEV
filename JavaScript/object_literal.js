@@ -20,5 +20,16 @@ console.log(student);
 delete student.marks;//deletion
 console.log(student);
 
+//multiple objects
+const classInfo={
+    aman:{grade:"A",city:"delhi"},
+    upendra:{grade:"B",city:"kanpur"},
+    karan:{grade:"c",city:"mumbai"}
+}
+console.log(classInfo);
+console.log(classInfo.upendra.city);
 
-console.log();
+console.log("Random number generation between 1 to 10");
+for(let i=1;i<=10;i++){
+    console.log(Math.floor(Math.random()*10)+1);
+}
