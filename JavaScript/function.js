@@ -86,4 +86,40 @@ const student={
 }
 
 //try and catch
+try{
+    console.log(a);
+}catch(e){
+    console.log("variable a is not defined");
+    console.log(e);
+}
 
+
+//arrow function
+const sum1=(a,b)=>{
+    console.log(a+b);
+}
+sum1(5,4);
+
+//implicit return in arrow function
+const mul=(a,b)=>a*b;
+console.log(mul(5,6));
+
+//set timeout function
+console.log("Set Timeout function");
+console.log("Hi there !");
+setTimeout(()=>{
+    console.log("Apna College");
+},1000);
+console.log("Welcome to")
+
+//set interval function
+console.log("Set Interval function");
+let id=setInterval(()=>{
+    console.log("Hi");
+},4000);
+console.log(id);
+//clear interval function
+clearInterval(id);
+
+
+//this with arrow functions
