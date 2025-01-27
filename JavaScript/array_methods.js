@@ -72,3 +72,67 @@ console.log(num9);
 console.log(Math.min(...num7));//Math.min function takes values as arguments not whole array
 //...arr passes all the elements then Math.min function takes them as arguments
 //then it calculates the minimum value
+console.log(...num9);
+console.log(..."Apna COllege !");
+
+let odd=[1,3,5,7,9];
+let even1=[2,4,6,8,10];
+let num10=[...odd,...even1];
+console.log(num10);//combines both odd and even arrays in one array
+
+//spread with object literals
+const data={
+    email:"abcd@gmail.com",
+    password:"abcd",
+};
+const dataCopy={...data,id:123,hint:"alphabets"};
+console.log(dataCopy);
+
+//Rest Method
+//used to pass a variable number of arguments to a function and
+//bundle them in an array
+function sum1(...args){
+    return args.reduce((sum,el)=>sum+el);
+}
+console.log(sum1(1,2,3,4,5,6,7,8,9));
+
+function sum2(...args){
+    for(let i=0;i<args.length;i++){
+        console.log("You gave us ",args[i]);
+    }
+}
+sum2(1,2,3,4,5);
+
+//Destructuring Method
+//used to unpack values from arrays or objects into distinct variables
+//old array doesn't get changed in this process
+let names=["tony","bruce","peter","steve"];
+//let winner=names[0];
+//let runnerup=names[1];
+//let third=names[2];
+let[winner,runnerup,third]=names;
+console.log(winner);
+console.log(runnerup);
+console.log(third);
+//we can also store the rest of array in another array by using the rest operator
+let[winner1,...participants]=names;
+console.log(winner1);
+console.log(participants);
+
+//destructuring in object
+const student={
+    name:"karan",
+    age:14,
+    class:9,
+    subject:["hindi","english","math","science"],
+    username:"karan@123",
+    password:"abcd",
+};
+
+let{username,password}=student;//here it is taking only the specified values
+console.log(username);//which we are destructuring not one the basis of index 
+console.log(password);//where as on the basis of key value pair
+//and if we want to store the values into different variable then we do as :
+let{username:us,password:ps}=student;//here we are renaming the variables
+console.log(us);
+console.log(ps);
