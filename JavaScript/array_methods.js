@@ -62,3 +62,13 @@ console.log(sum);
 let num6=[1,2,3,4,5,6,7,8,12,45,85];
 let max=num6.reduce((acc,cur)=>(acc>cur?acc:cur));
 console.log(max);
+
+//Spread Method
+//used to expand array elements in function calls
+let num7=[1,2,3,4,5,6,7,8];
+let num8=[9,10,11,12,13,14,15,16];
+let num9=[...num7,...num8];
+console.log(num9);
+console.log(Math.min(...num7));//Math.min function takes values as arguments not whole array
+//...arr passes all the elements then Math.min function takes them as arguments
+//then it calculates the minimum value
