@@ -18,3 +18,11 @@ let links=document.querySelectorAll(".box a");
 for(link of links){
     link.style.color="red";
 }
+
+//creation and insertion of new element
+let btn=document.createElement('button');//creating element
+btn.textContent="Click me";
+btn.style.background="green";
+
+let box=document.querySelector('.box');
+box.appendChild(btn);//appending element as a child
