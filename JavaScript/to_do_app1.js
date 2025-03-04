@@ -28,3 +28,14 @@ btn.addEventListener("click",function(){
 //         par.remove();
 //     })
 // }
+
+//now  we will use event bubbling concept to trigger the event delegation issue 
+//occured in above case
+//this below code will delete all the newly added elements
+ul.addEventListener("click",function(event){
+    if(event.target.nodeName == "BUTTON"){
+        let listItem=event.target.parentElement;
+        listItem.remove();
+        console.log("deleted");
+    }
+});
