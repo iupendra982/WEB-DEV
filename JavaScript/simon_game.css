@@ -29,3 +29,7 @@ body{
 .green{
     background-color: rgb(78, 148, 78);
 }
+
+.flash{
+    background-color: white;
+}
