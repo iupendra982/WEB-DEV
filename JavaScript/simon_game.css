@@ -27,9 +27,13 @@ body{
 }
 
 .green{
-    background-color: rgb(78, 148, 78);
+    background-color: rgb(99, 184, 184);
 }
 
 .flash{
     background-color: white;
+}
+
+.userflash{
+    background-color: green;
 }
