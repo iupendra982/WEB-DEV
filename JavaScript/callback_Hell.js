@@ -64,17 +64,21 @@ function saveToDb(data){
 //compact way of writing is 
 
 saveToDb("Data1")
-.then(()=>{
+.then((result)=>{
     console.log("Data1 saved :Promise was resolved");
-     return saveToDb("Data2");
+    console.log("Result of promise : ",result);
+    return saveToDb("Data2");
 })
-.then(()=>{
+.then((result)=>{
     console.log("Data2 saved :Promise was resolved");
+    console.log("Result of promise : ",result);
     return saveToDb("Data3");
 })
-.then(()=>{
+.then((result)=>{
     console.log("Data3 saved :Promise was resolved");
+    console.log("Result of promise : ",result);
 })
-.catch(()=>{
+.catch((error)=>{
     console.log("Promise was rejected");
+    console.log("Result of error : ",error);
 });
