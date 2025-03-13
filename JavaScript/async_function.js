@@ -21,7 +21,7 @@
 function getNum(){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            let num = Math.floor(Math.random()*10);
+            let num = Math.floor(Math.random()*10)+1;
             console.log(num);
             resolve();
         },1000);
@@ -41,6 +41,10 @@ h1=document.querySelector("h1");
 function changeColor(color,delay){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
+            let num = Math.floor(Math.random()*5)+1;
+            if(num>3){
+                reject("Promise rejected");
+            }
             h1.style.color=color;
             console.log(`Color changed to ${color}`);
             resolve("color changed!");
@@ -49,9 +53,18 @@ function changeColor(color,delay){
 }
 
 async function changeColorDemo(){
-    await changeColor("red",1000);
-    await changeColor("orange",1000);
-    await changeColor("blue",1000);
-    await changeColor("green",1000);
-    await changeColor("yellow",1000);
+    try{
+        await changeColor("red",1000);
+        await changeColor("orange",1000);
+        await changeColor("blue",1000);
+        await changeColor("green",1000);
+        await changeColor("yellow",1000);
+    }catch(err){
+        console.log("Error caught");
+        console.log(err);
     }
+
+    let a=5;
+    console.log(a);
+    console.log("New number = ",a+3);
+}
